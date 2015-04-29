@@ -1,6 +1,5 @@
 <?php
 
-
     include("modelo/modelo.php");
 	$con = conectar();
 	if (!$con) {
@@ -14,20 +13,17 @@
 	
     
 
-	if($_POST['buscar']=="")
-        $result = consultarUsuarios();
-    else
-	   $result = consultarUsuarioAtributo($_POST['buscar'],$_POST['atributo']);
+	$usuario=$_SESSION['Usuario'];
+	$result = consultarUsuario($usuario);
     if (!$result) {
       die('Could not select: ' . mysql_error());
     }
+
+    $fila=mysql_fetch_array($result);
     
-    include "vista/vistaConsultarUsuarios.php";    
+    include "vista/vistaEditarUsuario.php";    
 	
     mysql_close($con);
 
 
 ?>
-
-
-

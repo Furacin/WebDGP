@@ -14,20 +14,17 @@
 	
     
 
-	if($_POST['buscar']=="")
+	if($_SESSION['Usuario']=="")
         $result = consultarUsuarios();
     else
-	   $result = consultarUsuarioAtributo($_POST['buscar'],$_POST['atributo']);
+	   $result = consultarUsuario($_SESSION['Usuario']);
     if (!$result) {
       die('Could not select: ' . mysql_error());
     }
     
-    include "vista/vistaConsultarUsuarios.php";    
+    include "vista/vistaConsultarUsuarioRepresentante.php";    
 	
     mysql_close($con);
 
 
 ?>
-
-
-

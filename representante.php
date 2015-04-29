@@ -53,20 +53,20 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                     include "vista/vistaCabeceraRepresentante.php";
                     include "vista/vistaUsuarioRepresentante.php";
                 break;
-                case "consultarUsuarios":
+                case "consultarUsuario":
                     include "vista/vistaCabeceraRepresentante.php";
-                    include "vista/vistaConsultarUsuarios.php";
-                    include "controlador/consultarUsuarios.php"; 
-                break;
-                case "insertarUsuario":
-                    include "vista/vistaCabeceraRepresentante.php";
-                    include "vista/vistaGestionUsuarios.php"; 
-                    include "vista/vistaInsertarUsuario.php"; 
+                    //include "vista/vistaConsultarUsuarioRepresentante.php"; 
+                    include "controlador/consultarUsuarioRepresentante.php"; 
                 break;
                 case "editarUsuario":
                     include "vista/vistaCabeceraRepresentante.php";
-                    include "vista/vistaGestionUsuarios.php"; 
-                    include "controlador/editarUsuarioAdmin.php"; 
+                    //include "vista/vistaGestionUsuarios.php"; 
+                    include "controlador/editarUsuario.php"; 
+                break;
+                case "notificacionAdmin":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    //include "vista/vistaConsultarUsuarioRepresentante.php"; 
+                    //include "controlador/consultarUsuarioRepresentante.php"; 
                 break;
                 case "eliminarUsuario":
                     include "vista/vistaCabeceraRepresentante.php";
