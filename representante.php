@@ -67,15 +67,16 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                     include "vista/vistaCabeceraRepresentante.php";
                     //include "vista/vistaConsultarUsuarioRepresentante.php"; 
                     //include "controlador/consultarUsuarioRepresentante.php"; 
-                break;
-                case "eliminarUsuario":
-                    include "vista/vistaCabeceraRepresentante.php";
-                    include "vista/vistaGestionUsuarios.php"; 
-                    include "controlador/preguntaEliminarUsuario.php"; 
-                break;                
+                break;              
                 case "Reservas":
-                    include "vista/vistaCabecera2.php";      
-                    include "vista/vistaRegistrarse.php";
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaUsuarioRepresentante.php";
+                break;
+                case "Alojamientos":
+                    echo "<section class='hero2'>";
+                include "vista/vistaCabecera2.php";      
+                include "vista/vistaRegistrarAlojamiento.php";
+                    echo "</section><!--  end hero section  -->";   
                 break;
                 default:                   
                     include "vista/vistaCabeceraRepresentante.php";

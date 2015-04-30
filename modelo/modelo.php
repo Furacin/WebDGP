@@ -45,4 +45,8 @@ function eliminarUsuario($usuario){
 	return (mysql_query("DELETE FROM usuarios WHERE Usuario='".$usuario."'"));
 }
 
+function registrarAlojamiento($cif,$nombre,$ciudad,$direccion,$descripcion,$oferta){
+       return (mysql_query("INSERT INTO `dgp`.`alojamientos` (`CIF`, `nombre`, `ciudad`, `direccion`, `descripcion`, `oferta`) VALUES ('".$cif."','".$nombre."','".$ciudad."','".$direccion."','".$descripcion."','".$oferta."')"));
+}
+
 ?>

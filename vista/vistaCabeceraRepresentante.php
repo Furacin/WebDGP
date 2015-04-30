@@ -5,8 +5,8 @@
         <nav>
             <ul>
                 <li><a href="representante.php?opcion=Usuarios">Usuario</a></li>
-                <li><a href="#">Reservas</a></li>
-                <li><a href="#">Alojamientos</a></li>
+                <li><a href="representante.php?opcion=Reservas">Reservas</a></li>
+                <li><a href="representante.php?opcion=Alojamientos">Alojamientos</a></li>
             </ul>
             <?php 
                 echo "<p class='usuario'>Bienvenido Representante, " .$_SESSION['Nombre']. " <a href='controlador/cerrarSesion.php'>Cerrar Sesion</p>";               
