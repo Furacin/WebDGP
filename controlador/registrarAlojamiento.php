@@ -20,7 +20,7 @@
 	$oferta=$_POST["oferta"];
 	
 	
-	if(!registrarAlojamiento($cif,$nombre,$ciudad,$direccion,$descripcion,$oferta)){
+	if(!registrarAlojamiento($cif,$nombre,$ciudad,$direccion,$descripcion,$oferta,$_SESSION['Usuario'])){
 		die('Could not insert: ' . mysql_error());
 	}
 	

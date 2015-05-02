@@ -49,10 +49,10 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
         }else{
             echo "<section class='hero2'>";
             switch ($_GET['opcion']){
-                case "Usuarios":
+                /*case "Usuarios":
                     include "vista/vistaCabeceraRepresentante.php";
                     include "vista/vistaUsuarioRepresentante.php";
-                break;
+                break;*/
                 case "consultarUsuario":
                     include "vista/vistaCabeceraRepresentante.php";
                     //include "vista/vistaConsultarUsuarioRepresentante.php"; 
@@ -73,10 +73,24 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                     include "vista/vistaUsuarioRepresentante.php";
                 break;
                 case "Alojamientos":
-                    echo "<section class='hero2'>";
-                include "vista/vistaCabecera2.php";      
-                include "vista/vistaRegistrarAlojamiento.php";
-                    echo "</section><!--  end hero section  -->";   
+                    //echo "<section class='hero2'>";
+                    include "vista/vistaCabeceraRepresentante.php";  
+                    include "vista/vistaAlojamientoRepresentante.php";
+                //include "vista/vistaRegistrarAlojamiento.php";
+                    //echo "</section><!--  end hero section  -->";   
+                break;
+                case "altaAlojamiento":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaRegistrarAlojamiento.php";
+                break;
+                case "consultarAlojamientos":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "controlador/consultarAlojamientos.php"; 
+                break;
+                case "editarAlojamiento":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaModificacionAlojamientos.php"; 
+                    include "controlador/editarAlojamiento.php"; 
                 break;
                 default:                   
                     include "vista/vistaCabeceraRepresentante.php";

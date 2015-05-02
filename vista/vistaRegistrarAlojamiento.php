@@ -40,17 +40,6 @@
                         <label>Oferta:</label></td><td><input type="textbox" name="oferta">
                     </td>
                 </tr>
-               <!--  <tr>
-                    <td class="tablaInput">
-                        <label>Telefono:</label></td><td><input type="textbox" name="telefono" required>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tablaInput">
-                        <label>email:</label></td><td><input type="textbox" name="email">
-                    </td>
-                </tr>
-                <tr> -->
                     <td colspan="2"class="tablaVolver"><a href="index.php" class="volver">Volver</a></td>
                 </tr>
                 <tr>
