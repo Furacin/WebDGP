@@ -59,7 +59,7 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="basico")){
                     include "controlador/consultarUsuarioRepresentante.php"; 
                 break;
                 case "editarUsuario":
-                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaCabeceraBasico.php";
                     //include "vista/vistaGestionUsuarios.php"; 
                     include "controlador/editarUsuario.php"; 
                 break;
