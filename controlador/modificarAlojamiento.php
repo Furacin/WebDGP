@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    //session_start();
 
    include("../modelo/modelo.php");
 	$con = conectar();
@@ -12,27 +12,21 @@
      die('Could not select database: ' . mysql_error());
     }
 	
-    $usuario=$_POST["usuario"];
-    if($_POST["contrasenia"]==""){
-        $contrasenia=$_POST["contraseniaAnterior"];
-    }else{
-        $contrasenia=$_POST["contrasenia"];
-    }
+	$cif=$_POST["cif"];
 	$nombre=$_POST["nombre"];
-	$apellidos=$_POST["apellidos"];
-	$direc=$_POST["direccion"];
-	$tlf=$_POST["telefono"];
-	$email=$_POST["email"];
-    $tipo=$_POST["tipo"];
+	$ciudad=$_POST["ciudad"];
+	$direccion=$_POST["direccion"];
+	$descripcion=$_POST["descripcion"];
+	$oferta=$_POST["oferta"];
 	
 	
-	if(!editarUsuarioAdmin($usuario,$contrasenia,$nombre,$apellidos,$direc,$tlf,$email,$tipo)){
+	if(!editarAlojamiento($cif,$nombre,$ciudad,$direccion,$descripcion,$oferta)){
 		die('Could not insert: ' . mysql_error());
 	}
 	
     mysql_close($con);
 
 	
-	header('Location: ../admin.php?opcion=consultarUsuarios');
+	header('Location: ../representante.php?opcion=editarAlojamiento');
    			
 ?>

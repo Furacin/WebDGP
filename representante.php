@@ -76,7 +76,7 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                     //echo "<section class='hero2'>";
                     include "vista/vistaCabeceraRepresentante.php";  
                     include "vista/vistaAlojamientoRepresentante.php";
-                //include "vista/vistaRegistrarAlojamiento.php";
+                    //include "vista/vistaRegistrarAlojamiento.php";
                     //echo "</section><!--  end hero section  -->";   
                 break;
                 case "altaAlojamiento":
@@ -90,7 +90,7 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                 case "editarAlojamiento":
                     include "vista/vistaCabeceraRepresentante.php";
                     include "vista/vistaModificacionAlojamientos.php"; 
-                    include "controlador/editarAlojamiento.php"; 
+                    //include "controlador/modificarAlojamiento.php"; 
                 break;
                 default:                   
                     include "vista/vistaCabeceraRepresentante.php";

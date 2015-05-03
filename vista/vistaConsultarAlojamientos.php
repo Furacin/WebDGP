@@ -28,31 +28,32 @@
         while($fila=mysql_fetch_array($result)){
         echo "<tr>
           <td align='center'>
-            <a href='representante.php?opcion=editarAlojamiento&usuario=".$fila[0]."'>". $fila['CIF'] ."</a>
+            ". $fila['CIF'] ."
           </td>
           <td>
-            <a href='representante.php?opcion=editarAlojamiento&usuario=".$fila[1]."'>". $fila['nombre'] ."</a>
+            ". $fila['nombre'] ."
           </td>
           <td>
-            <a href='representante.php?opcion=editarAlojamiento&usuario=".$fila[2]."'>". $fila['ciudad']. "</a>
+            ". $fila['ciudad']. "
           </td>
           <td>
-            <a href='representante.php?opcion=editarAlojamiento&usuario=".$fila[3]."'>". $fila['direccion']. "</a>
+            ". $fila['direccion']. "
           </td>
           <td>  
-            <a href='representante.php?opcion=editarAlojamiento&usuario=".$fila[4]."'>". $fila['descripcion']."</a>
-          </td>
-                  <td>  
-            <a href='representante.php?opcion=editarAlojamiento&usuario=".$fila[5]."'>". $fila['oferta']."</a>
+            ". $fila['descripcion']."
           </td>
           <td>  
-            <a href='representante.php?opcion=editarAlojamiento&usuario=".$fila[6]."'>". $fila['usuario_alojamiento']."</a>
+            ". $fila['oferta']."
+          </td>
+          <td>  
+            ". $fila['usuario_alojamiento']."
           </td>
           <td>
-            <a class=\"ico edit\" href='representante.php?opcion=editarAlojamiento&usuario=".$fila[0]."' title='".$fila['nombre']."'>Editar</a> | <a class=\"del ico\" href='representante.php?opcion=eliminarAlojamiento&usuario=".$fila[0]."' title='".$fila['nombre']."'>Eliminar</a>
+            <a class=\"ico edit\" href='representante.php?opcion=editarAlojamiento&cif=".$fila['CIF']."' title='".$fila['nombre']."'>Editar</a> | <a class=\"del ico\" href='representante.php?opcion=eliminarAlojamiento&usuario' title='".$fila['CIF']."'>Eliminar</a>
           </td>
         </tr>";
         }
+
       ?>  
         </table>
     </div>

@@ -1,60 +1,38 @@
 <section class="modificar">
     <div id="modificar">
-        <form action="controlador/modificarAlojamiento.php" id="formulario" name="formulario" method="post" onsubmit="return compara()">
+        <form action="controlador/modificarAlojamiento.php" id="formulario" name="formulario" method="post" >
             <table class="modificar" >
                 <tr>
                     <th class="tablaCabecera" colspan="2">Modificación de Alojamiento</th>
                 </tr>
                 <tr>
                     <td class="tablaInput">
-                        <label>CIF:</label></td><td><input type="textbox" name="usuario" readonly value="<?php echo $fila['CIF'] ?>">
+                        <label>CIF:</label></td><td><input type="textbox" name="cif" required value="<?php echo $fila[0] ?>">
                     </td>
                 </tr>
                 <tr>
                     <td class="tablaInput">
-                        <label>Contraseña:</label></td><td><input type="password" name="contrasenia"  />
-                        <input type="hidden" name="contraseniaAnterior" value="<?php echo $fila['Contrasenia'] ?>" />
+                        <label>Nombre:</label></td><td><input type="textbox" name="nombre" required  />
                     </td>
                 </tr>
                 <tr>
                     <td class="tablaInput">
-                        <label>Confirmar Contraseña:</label></td><td><input type="password" name="contrasenia2" >
+                        <label>Ciudad:</label></td><td><input type="textbox" name="ciudad" required  />
                     </td>
                 </tr>
                 <tr>
                     <td class="tablaInput">
-                        <label>Nombre:</label></td><td><input type="textbox" name="nombre" required  value="<?php echo $fila['Nombre'] ?>">
+                        <label>Dirección:</label></td><td><input type="textbox" name="direccion" required  />
                     </td>
                 </tr>
                 <tr>
                     <td class="tablaInput">
-                        <label>Apellidos:</label></td><td><input type="textbox" name="apellidos" required value="<?php echo $fila['Apellidos'] ?>">
+                        <label>Descripción:</label></td><td><input type="textbox" name="descripcion" required  />
                     </td>
                 </tr>
                 <tr>
                     <td class="tablaInput">
-                        <label>Direccion:</label></td><td><input type="textbox" name="direccion" value="<?php echo $fila['Direccion'] ?>">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tablaInput">
-                        <label>Telefono:</label></td><td><input type="textbox" name="telefono" required value="<?php echo $fila['Telefono'] ?>">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tablaInput">
-                        <label>email:</label></td><td><input type="textbox" name="email" value="<?php echo $fila['email'] ?>">
-                    </td>
-                </tr>
-                <tr>
-                    <td class="tablaInput">
-                        <label>Tipo:</label>
-                    </td>
-                    <td>
-                        <select name="tipo">
-                            <option <?php if($fila['Tipo']=="Usuario") echo "selected"?> >Usuario</option>
-                            <option <?php if($fila['Tipo']=="Administrador") echo "selected"?> >Administrador</option>
-                        </select>
+                        <label>Oferta:</label></td><td><input type="textbox" name="oferta" required  />
                     </td>
                 </tr>
                 <tr>

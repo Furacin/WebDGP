@@ -45,9 +45,9 @@ function editarUsuario($usuario,$contrasenia,$nombre,$apellidos,$direccion,$tele
 	return (mysql_query("UPDATE usuarios SET Contrasenia='".$contrasenia."',Nombre='".$nombre."',Apellidos='".$apellidos."',Direccion='".$direccion."',email='".$email."',Telefono='".$telefono."' WHERE Usuario='".$usuario."'"));
 }
 
-/*function editarAlojamiento($usuario,$contrasenia,$nombre,$apellidos,$direccion,$telefono,$email){
-  return (mysql_query("UPDATE usuarios SET Contrasenia='".$contrasenia."',Nombre='".$nombre."',Apellidos='".$apellidos."',Direccion='".$direccion."',email='".$email."',Telefono='".$telefono."' WHERE Usuario='".$usuario."'"));
-}*/
+function editarAlojamiento($cif,$nombre,$ciudad,$direccion,$descripcion,$oferta){
+  return (mysql_query("UPDATE alojamientos SET nombre='".$nombre."',nombre='".$ciudad."',ciudad='".$direccion."',descripcion='".$descripcion."',oferta='".$oferta."' WHERE CIF='".$cif."'"));
+}
 
 function eliminarUsuario($usuario){
 	return (mysql_query("DELETE FROM usuarios WHERE Usuario='".$usuario."'"));
