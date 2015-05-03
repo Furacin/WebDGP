@@ -1,10 +1,8 @@
 <?php
 session_start();
-
 if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
     header('Location: index.php');
 }else{
-
 ?>
     <!DOCTYPE html>
     <html lang="es">
@@ -67,15 +65,47 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                     include "vista/vistaCabeceraRepresentante.php";
                     //include "vista/vistaConsultarUsuarioRepresentante.php"; 
                     //include "controlador/consultarUsuarioRepresentante.php"; 
-                break;
-                case "eliminarUsuario":
-                    include "vista/vistaCabeceraRepresentante.php";
-                    include "vista/vistaGestionUsuarios.php"; 
-                    include "controlador/preguntaEliminarUsuario.php"; 
-                break;                
+                break;    
                 case "Reservas":
-                    include "vista/vistaCabecera2.php";      
-                    include "vista/vistaRegistrarse.php";
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaReservasRepresentante.php";
+                break;
+                case "altaReserva":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaRegistrarReserva.php";
+                break;
+                case "modificarReserva":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaModificarReserva.php";
+                break;
+                case "bajaReserva":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaEliminarReserva.php";
+                break;
+                case "consultarReservas":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    //include "vista/vistaConsultarReservas.php"; 
+                    include "controlador/consultarReservas.php"; 
+                break;
+                case "Alojamientos":
+                    //echo "<section class='hero2'>";
+                    include "vista/vistaCabeceraRepresentante.php";  
+                    include "vista/vistaAlojamientoRepresentante.php";
+                //include "vista/vistaRegistrarAlojamiento.php";
+                    //echo "</section><!--  end hero section  -->";   
+                break;
+                case "altaAlojamiento":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaRegistrarAlojamiento.php";
+                break;
+                case "consultarAlojamientos":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "controlador/consultarAlojamientos.php"; 
+                break;
+                case "editarAlojamiento":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaModificacionAlojamientos.php"; 
+                    include "controlador/editarAlojamiento.php"; 
                 break;
                 default:                   
                     include "vista/vistaCabeceraRepresentante.php";
