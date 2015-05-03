@@ -4,7 +4,7 @@
         <a href="#" class="hamburger"></a>
         <nav>
             <ul>
-                <li><a href="representante.php?opcion=Usuarios">Usuario</a></li>
+                <li><a href="representante.php?opcion=consultarUsuario">Usuario</a></li>
                 <li><a href="representante.php?opcion=Reservas">Reservas</a></li>
                 <li><a href="representante.php?opcion=Alojamientos">Alojamientos</a></li>
             </ul>

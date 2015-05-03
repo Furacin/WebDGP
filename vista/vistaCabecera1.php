@@ -24,6 +24,9 @@
                 else
                     if ($_SESSION['Tipo']=="representante")
                         echo "<a href='representante.php' class='loginAdmin'>Vista Representante</a>";
+                    else
+                        if ($_SESSION['Tipo']=="basico")
+                        echo "<a href='basico.php' class='loginAdmin'>Vista Usuario Básico</a>";
             }
         ?>
     </div>
