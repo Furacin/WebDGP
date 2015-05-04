@@ -49,7 +49,7 @@
             ". $fila['usuario_alojamiento']."
           </td>
           <td>
-            <a class=\"ico edit\" href='basico.php?opcion=consultarDisponibilidades&cif=".$fila['CIF']."' title='".$fila['nombre']."'>Reservar habitación</a> 
+            <a class=\"ico edit\" href='representante.php?opcion=crearDisponibilidad&cif=".$fila['CIF']."' title='".$fila['nombre']."'>Ofertar habitación</a> 
           </td>
         </tr>";
         }

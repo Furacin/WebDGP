@@ -70,7 +70,7 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                 break;              
                 case "Reservas":
                     include "vista/vistaCabeceraRepresentante.php";
-                    include "vista/vistaUsuarioRepresentante.php";
+                    include "vista/vistaReservasRepresentante.php";
                 break;
                 case "Alojamientos":
                     //echo "<section class='hero2'>";
@@ -89,17 +89,25 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                 break;
                 case "consultarAlojamientosDisponibilidades":
                     include "vista/vistaCabeceraRepresentante.php";
-                    include "controlador/consultarAlojamientosDisponibilidades.php"; 
+                    include "controlador/consultarAlojamientosReservasDisponibilidades.php";
+                    //include "controlador/consultarAlojamientosDisponibilidadesRepresentante.php"; 
                 break;
                 case "editarAlojamiento":
                     include "vista/vistaCabeceraRepresentante.php";
                     include "vista/vistaModificacionAlojamientos.php"; 
                     //include "controlador/modificarAlojamiento.php"; 
                 break;
+                case "consultarReserva":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "controlador/consultarAlojamientosReservas.php"; 
+                break;
+                case "consultarReservas":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "controlador/consultarAlojamientosReservas.php"; 
+                break;
                 case "crearDisponibilidad":
                     include "vista/vistaCabeceraRepresentante.php";
-                    include "vista/vistaRegistrarDisponibilidad.php"; 
-                    //include "controlador/modificarAlojamiento.php"; 
+                    include "vista/vistaRegistrarDisponibilidad.php";
                 break;
                 default:                   
                     include "vista/vistaCabeceraRepresentante.php";

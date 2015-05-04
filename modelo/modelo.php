@@ -45,6 +45,22 @@ function consultarValoraciones($usuario){
     return (mysql_query("SELECT * FROM dgp.valoraciones WHERE usuario='".$usuario."'"));
 }
 
+function consultarAlojamientosReservas(){
+    return (mysql_query("SELECT * FROM dgp.alojamientos"));
+}
+
+function consultarReservas($usuario){
+    return (mysql_query("SELECT * FROM dgp.reservas WHERE usuario='".$usuario."'"));
+}
+
+function consultarAlojamientoDisponibilidades($cif){
+    return (mysql_query("SELECT * FROM dgp.disponibilidad WHERE alojamiento='".$cif."'"));
+}
+
+function consultarDisponibilidades($usuario) {
+    return (mysql_query("SELECT * FROM dgp.disponibilidad"));
+}
+
 function editarUsuarioAdmin($usuario,$contrasenia,$nombre,$apellidos,$direccion,$telefono,$email,$tipo){
 	return (mysql_query("UPDATE usuarios SET Tipo='".$tipo."', Contrasenia='".$contrasenia."',Nombre='".$nombre."',Apellidos='".$apellidos."',Direccion='".$direccion."',email='".$email."',Telefono='".$telefono."' WHERE Usuario='".$usuario."'"));
 }
@@ -79,6 +95,10 @@ function registrarValoracion($cif,$voto,$comentario,$usuario){
 
 function registrarDisponibilidad($cif,$precio){
        return (mysql_query("INSERT INTO `dgp`.`disponibilidad` (`alojamiento`, `precio`) VALUES ('".$cif."','".$precio."')"));
+}
+
+function registrarReserva($cif,$personas,$id_disponibilidad,$usuario){
+       return (mysql_query("INSERT INTO `dgp`.`reservas` (`num_personas`, `usuario`, `alojamiento_reserva`, `id_disponibilidad`) VALUES ('".$personas."','".$usuario."','".$cif."','".$id_disponibilidad."')"));
 }
 
 ?>

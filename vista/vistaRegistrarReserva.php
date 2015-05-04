@@ -5,24 +5,29 @@
 
 <section class="registro">
     <div id="registro">
-        <form action="controlador/registrarValoracion.php" method="post">
+        <form action="controlador/registrarReserva.php" method="post">
             <table class="registro" >
                 <tr>
                     <th class="tablaCabecera" colspan="2">Nueva Reserva</th>
                 </tr>
                 <tr>
                     <td class="tablaInput">
-                        <label>CIF:</label></td><td><input type="textbox" name="cif">
+                        <label>ID de oferta:</label></td><td><input type="textbox" name="id_disponibilidad" readonly value="<?php echo $_GET['id_disponibilidad'] ?>">
                     </td>
                 </tr>
                 <tr>
                     <td class="tablaInput">
-                        <label>Voto (1-10):</label></td><td><input type="textbox" name="voto">
+                        <label>CIF:</label></td><td><input type="textbox" name="cif" readonly value="<?php echo $_GET['cif'] ?>">
                     </td>
                 </tr>
                 <tr>
                     <td class="tablaInput">
-                        <label>Comentario:</label></td><td><input type="textbox" name="comentario">
+                        <label>Precio(€):</label></td><td><input type="textbox" name="precio"  readonly value="<?php echo $_GET['precio'] ?>">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tablaInput">
+                        <label>Nº Personas:</label></td><td><input type="textbox" name="numero_personas">
                     </td>
                 </tr>
                     <td colspan="2"class="tablaVolver"><a href="index.php" class="volver">Volver</a></td>

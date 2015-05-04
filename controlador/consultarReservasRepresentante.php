@@ -13,8 +13,9 @@
     }
 	
     
+
 	
-	$result = consultarReservas($_SESSION['Usuario']);
+	$result = consultarAlojamientosReservas($_SESSION['Usuario']);
     if (!$result) {
       die('Could not select: ' . mysql_error());
     }

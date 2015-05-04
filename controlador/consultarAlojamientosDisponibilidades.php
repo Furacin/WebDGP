@@ -13,9 +13,9 @@
     }
 	
     
-
+  $cif=$_GET["cif"];
 	
-	$result = consultarAlojamientosValoracion($_SESSION['Usuario']);
+	$result = consultarAlojamientoDisponibilidades($cif);
     if (!$result) {
       die('Could not select: ' . mysql_error());
     }

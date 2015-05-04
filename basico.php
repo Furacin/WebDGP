@@ -95,7 +95,7 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="basico")){
                 break;
                 case "reservas":
                     include "vista/vistaCabeceraBasico.php";
-                    include "vista/vistaReservas.php"; 
+                    include "vista/vistaReservasBasico.php"; 
                 break;
                 case "consultarReserva":
                     include "vista/vistaCabeceraBasico.php";
@@ -104,6 +104,16 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="basico")){
                 case "crearReserva":
                     include "vista/vistaCabeceraBasico.php";
                     include "vista/vistaRegistrarReserva.php";
+                break;
+                case "consultarDisponibilidades":
+                    include "vista/vistaCabeceraBasico.php";
+                    include "controlador/consultarAlojamientosDisponibilidades.php";
+                    //include "vista/vistaConsultarAlojamientosDisponibilidades.php";
+                break;
+                case "consultarAlojamientos":
+                    include "vista/vistaCabeceraBasico.php";
+                    //include "vista/vistaConsultarUsuarioRepresentante.php"; 
+                    include "controlador/consultarAlojamientosReservas.php"; 
                 break;
                 default:                   
                     include "vista/vistaCabeceraBasico.php";

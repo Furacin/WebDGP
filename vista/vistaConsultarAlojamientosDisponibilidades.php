@@ -16,40 +16,24 @@
     <div class="table">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
-            <th>CIF</th>
-            <th>Nombre</th>
-            <th>Ciudad</th>
-            <th>Direccion</th>
-            <th>Descripción</th>
-            <th>Oferta</th>
-            <th>Usuario del alojamiento</th>
+            <th>ID</th>
+            <th>CIF-Alojamiento</th>
+            <th>Precio</th>
         </tr>
         <?php
         while($fila=mysql_fetch_array($result)){
         echo "<tr>
           <td align='center'>
-            ". $fila['CIF'] ."
+            ". $fila['id_disponibilidad'] ."
           </td>
           <td>
-            ". $fila['nombre'] ."
+            ". $fila['alojamiento'] ."
           </td>
           <td>
-            ". $fila['ciudad']. "
-          </td>
+            ". $fila['precio']. "
+          </td> 
           <td>
-            ". $fila['direccion']. "
-          </td>
-          <td>  
-            ". $fila['descripcion']."
-          </td>
-          <td>  
-            ". $fila['oferta']."
-          </td>
-          <td>  
-            ". $fila['usuario_alojamiento']."
-          </td>
-          <td>
-            <a class=\"ico edit\" href='representante.php?opcion=crearDisponibilidad&cif=".$fila['CIF']."'>Ofertar habitaciones</a> 
+            <a class=\"ico edit\" href='basico.php?opcion=crearReserva&cif=".$fila['alojamiento']."&precio=". $fila['precio']."&id_disponibilidad=". $fila['id_disponibilidad']."'>Reservar</a> 
           </td>
         </tr>";
         }

@@ -13,13 +13,14 @@
     }
 	
     
+
 	
-	$result = consultarReservas($_SESSION['Usuario']);
+	$result = consultarAlojamientos($_SESSION['Usuario']);
     if (!$result) {
       die('Could not select: ' . mysql_error());
     }
     
-    include "vista/vistaConsultarAlojamientosReservas.php";    
+    include "vista/vistaConsultarDisponibilidades.php";    
 	
     mysql_close($con);
 
