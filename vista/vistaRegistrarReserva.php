@@ -1,6 +1,6 @@
 <section class="caption">
     <h2 class="caption">Alojamientos en Granada</h2>
-    <h3 class="properties">Valoraciones de hoteles</h3>
+    <h3 class="properties">Reserva de hoteles</h3>
 </section>
 
 <section class="registro">
@@ -8,7 +8,7 @@
         <form action="controlador/registrarValoracion.php" method="post">
             <table class="registro" >
                 <tr>
-                    <th class="tablaCabecera" colspan="2">Nueva Valoración</th>
+                    <th class="tablaCabecera" colspan="2">Nueva Reserva</th>
                 </tr>
                 <tr>
                     <td class="tablaInput">

@@ -29,8 +29,8 @@ function consultarAlojamientos($usuario){
     return (mysql_query("SELECT * FROM dgp.alojamientos WHERE usuario_alojamiento='". $usuario ."'"));
 }
 
-function consultarAlojamientosValoracion(){
-    return (mysql_query("SELECT * FROM dgp.alojamientos"));
+function consultarAlojamientosValoracion($usuario){
+    return (mysql_query("SELECT * FROM dgp.alojamientos WHERE usuario_alojamiento='". $usuario ."'"));
 }
 
 function consultarUsuarioAtributo($valor,$atributo){
@@ -75,6 +75,10 @@ function registrarAlojamiento($cif,$nombre,$ciudad,$direccion,$descripcion,$ofer
 
 function registrarValoracion($cif,$voto,$comentario,$usuario){
        return (mysql_query("INSERT INTO `dgp`.`valoraciones` (`voto`, `comentario`, `usuario`, `alojamiento_valoracion`) VALUES ('".$voto."','".$comentario."','".$usuario."','".$cif."')"));
+}
+
+function registrarDisponibilidad($cif,$precio){
+       return (mysql_query("INSERT INTO `dgp`.`disponibilidad` (`alojamiento`, `precio`) VALUES ('".$cif."','".$precio."')"));
 }
 
 ?>

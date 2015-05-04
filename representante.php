@@ -49,10 +49,10 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
         }else{
             echo "<section class='hero2'>";
             switch ($_GET['opcion']){
-                /*case "Usuarios":
+                case "Usuarios":
                     include "vista/vistaCabeceraRepresentante.php";
                     include "vista/vistaUsuarioRepresentante.php";
-                break;*/
+                break;
                 case "consultarUsuario":
                     include "vista/vistaCabeceraRepresentante.php";
                     //include "vista/vistaConsultarUsuarioRepresentante.php"; 
@@ -87,13 +87,23 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                     include "vista/vistaCabeceraRepresentante.php";
                     include "controlador/consultarAlojamientos.php"; 
                 break;
+                case "consultarAlojamientosDisponibilidades":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "controlador/consultarAlojamientosDisponibilidades.php"; 
+                break;
                 case "editarAlojamiento":
                     include "vista/vistaCabeceraRepresentante.php";
                     include "vista/vistaModificacionAlojamientos.php"; 
                     //include "controlador/modificarAlojamiento.php"; 
                 break;
+                case "crearDisponibilidad":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaRegistrarDisponibilidad.php"; 
+                    //include "controlador/modificarAlojamiento.php"; 
+                break;
                 default:                   
                     include "vista/vistaCabeceraRepresentante.php";
+                    //include "vista/vistaUsuarioRepresentante.php";
                 break;
             }
             echo "</section><!--  end hero section  -->";

@@ -13,11 +13,10 @@
     }
 	
 	$cif=$_POST["cif"];
-    $voto=$_POST["voto"];
-    $comentario=$_POST["comentario"];
+    $precio=$_POST["precio"];
 	
 	
-	if(!registrarValoracion($cif,$voto,$comentario,$_SESSION['Usuario'])){
+	if(!registrarDisponibilidad($cif,$precio)){
 		die('Could not insert: ' . mysql_error());
 	}
 	
@@ -26,6 +25,6 @@
     mysql_close($con);
 
 	
-	header('Location: ../index.php');
+	header('Location: ../representante.php?opcion=Alojamientos');
    			
 ?>

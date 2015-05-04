@@ -1,6 +1,6 @@
 <section class="listings">
     <h1>Ofertas</h1>
-    <h3>Esta Semana Santa pásala en Granada</h3>
+    <h3>Los mejores hoteles para Granada</h3>
     <div class="wrapper">
         <ul class="properties_list">
             <li>

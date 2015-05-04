@@ -6,7 +6,7 @@
             <ul>
                 <li><a href="basico.php?opcion=Usuarios">Usuario</a></li>
                 <li><a href="basico.php?opcion=valoraciones">Valoración</a></li>
-                <li><a href="basico.php?opcion=Alojamientos">Reservas</a></li>
+                <li><a href="basico.php?opcion=reservas">Reservas</a></li>
             </ul>
             <?php 
                 echo "<p class='usuario'>Bienvenido, " .$_SESSION['Nombre']. " <a href='controlador/cerrarSesion.php'>Cerrar Sesion</p>";               

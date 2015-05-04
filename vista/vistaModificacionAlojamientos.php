@@ -7,7 +7,7 @@
                 </tr>
                 <tr>
                     <td class="tablaInput">
-                        <label>CIF:</label></td><td><input type="textbox" name="cif" required value="<?php echo $_SESSION['Usuario'] ?>">
+                        <label>CIF:</label></td><td><input type="textbox" name="cif" required value="<?php echo $_GET['cif'] ?>">
                     </td>
                 </tr>
                 <tr>
