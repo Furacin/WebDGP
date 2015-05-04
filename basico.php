@@ -68,29 +68,30 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="basico")){
                     //include "vista/vistaConsultarUsuarioRepresentante.php"; 
                     //include "controlador/consultarUsuarioRepresentante.php"; 
                 break;              
-                case "Reservas":
-                    include "vista/vistaCabeceraRepresentante.php";
-                    include "vista/vistaUsuarioRepresentante.php";
-                break;
-                case "Alojamientos":
-                    //echo "<section class='hero2'>";
-                    include "vista/vistaCabeceraRepresentante.php";  
-                    include "vista/vistaAlojamientoRepresentante.php";
-                    //include "vista/vistaRegistrarAlojamiento.php";
-                    //echo "</section><!--  end hero section  -->";   
-                break;
-                case "altaAlojamiento":
-                    include "vista/vistaCabeceraRepresentante.php";
-                    include "vista/vistaRegistrarAlojamiento.php";
-                break;
-                case "consultarAlojamientos":
-                    include "vista/vistaCabeceraRepresentante.php";
-                    include "controlador/consultarAlojamientos.php"; 
-                break;
-                case "editarAlojamiento":
+                case "valoraciones":
                     include "vista/vistaCabeceraBasico.php";
-                    //include "vista/vistaModificacionAlojamientos.php"; 
-                    //include "controlador/modificarAlojamiento.php"; 
+                    //include "vistaValoracionAlojamientos.php"
+                    include "vista/vistaValoracion.php";
+                break;
+                case "crearValoracion":
+                    include "vista/vistaCabeceraBasico.php";
+                    include "vista/vistaRegistrarValoracion.php";
+                break;
+                case "editarValoraciones":
+                    include "vista/vistaCabeceraBasico.php";
+                    include "controlador/consultarValoraciones.php"; 
+                break;
+                case "consultarValoracion":
+                    include "vista/vistaCabeceraBasico.php";
+                    include "controlador/consultarValoraciones.php";
+                break;
+                case "eliminarValoracion":
+                    include "vista/vistaCabeceraBasico.php";
+                    include "vista/vistaEliminarValoracion.php"; 
+                break;
+                case "modificaValoracion":
+                    include "vista/vistaCabeceraBasico.php";
+                    include "vista/vistaEditarValoracion.php"; 
                 break;
                 default:                   
                     include "vista/vistaCabeceraBasico.php";

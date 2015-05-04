@@ -2,26 +2,28 @@
 
 
     include("modelo/modelo.php");
-	$con = conectar();
-	if (!$con) {
+  $con = conectar();
+  if (!$con) {
      die('Could not connect: ' . mysql_error());
     }
-	
-	$db=selectDB();
+  
+  $db=selectDB();
     if (!$db) {
      die('Could not select database: ' . mysql_error());
     }
-	
-	
-	$result = consultarUsuario($_GET['usuario']);
+  
+    
+
+  if($_SESSION['Usuario']=="")
+        $result = consultarUsuarios();
+    else
+     $result = consultarUsuario($_SESSION['Usuario']);
     if (!$result) {
       die('Could not select: ' . mysql_error());
     }
-
-    $fila=mysql_fetch_array($result);
     
-    include "vista/vistaEditarUsuarioAdmin.php";    
-	
+    include "vista/vistaConsultarUsuarioRepresentante.php";    
+  
     mysql_close($con);
 
 

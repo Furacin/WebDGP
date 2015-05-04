@@ -5,7 +5,7 @@
         <nav>
             <ul>
                 <li><a href="basico.php?opcion=Usuarios">Usuario</a></li>
-                <li><a href="basico.php?opcion=Reservas">Valoración</a></li>
+                <li><a href="basico.php?opcion=valoraciones">Valoración</a></li>
                 <li><a href="basico.php?opcion=Alojamientos">Reservas</a></li>
             </ul>
             <?php 

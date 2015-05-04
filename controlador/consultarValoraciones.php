@@ -12,15 +12,15 @@
      die('Could not select database: ' . mysql_error());
     }
 	
+    
+
 	
-	$result = consultarUsuario($_GET['usuario']);
+	$result = consultarValoraciones($_SESSION['Usuario']);
     if (!$result) {
       die('Could not select: ' . mysql_error());
     }
-
-    $fila=mysql_fetch_array($result);
     
-    include "vista/vistaEditarUsuarioAdmin.php";    
+    include "vista/vistaConsultarValoraciones.php";    
 	
     mysql_close($con);
 
