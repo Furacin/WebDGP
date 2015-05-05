@@ -53,11 +53,15 @@ function consultarReservas($usuario){
     return (mysql_query("SELECT * FROM dgp.reservas WHERE usuario='".$usuario."'"));
 }
 
+function consultarReservasRepresentante($usuario){
+    return (mysql_query("SELECT * FROM dgp.reservas WHERE usuario='".$usuario."'"));
+}
+
 function consultarAlojamientoDisponibilidades($cif){
     return (mysql_query("SELECT * FROM dgp.disponibilidad WHERE alojamiento='".$cif."'"));
 }
 
-function consultarDisponibilidades($usuario) {
+function consultarDisponibilidades() {
     return (mysql_query("SELECT * FROM dgp.disponibilidad"));
 }
 

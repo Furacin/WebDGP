@@ -99,7 +99,7 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="basico")){
                 break;
                 case "consultarReserva":
                     include "vista/vistaCabeceraBasico.php";
-                    include "controlador/consultarAlojamientosReservas.php"; 
+                    include "controlador/consultarReservasBasico.php"; 
                 break;
                 case "crearReserva":
                     include "vista/vistaCabeceraBasico.php";

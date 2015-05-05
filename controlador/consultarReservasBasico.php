@@ -13,8 +13,9 @@
     }
 	
     
+
 	
-	$result = consultarReservasRepresentante($_SESSION['Usuario']);
+	$result = consultarReservas($_SESSION['Usuario']);
     if (!$result) {
       die('Could not select: ' . mysql_error());
     }

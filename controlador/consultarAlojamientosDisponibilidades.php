@@ -12,10 +12,8 @@
      die('Could not select database: ' . mysql_error());
     }
 	
-    
-  $cif=$_GET["cif"];
 	
-	$result = consultarAlojamientoDisponibilidades($cif);
+	$result = consultarDisponibilidades();
     if (!$result) {
       die('Could not select: ' . mysql_error());
     }
