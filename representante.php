@@ -97,13 +97,13 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                     include "vista/vistaModificacionAlojamientos.php"; 
                     //include "controlador/modificarAlojamiento.php"; 
                 break;
-                case "consultarReserva":
-                    include "vista/vistaCabeceraRepresentante.php";
-                    include "controlador/consultarAlojamientosReservas.php"; 
-                break;
                 case "consultarReservas":
                     include "vista/vistaCabeceraRepresentante.php";
                     include "controlador/consultarAlojamientosReservas.php"; 
+                break;
+                case "consultarReservasAlojamiento":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "controlador/consultarReservasAlojamiento.php"; 
                 break;
                 case "crearDisponibilidad":
                     include "vista/vistaCabeceraRepresentante.php";

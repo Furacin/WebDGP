@@ -12,13 +12,14 @@
      die('Could not select database: ' . mysql_error());
     }
 	
+   $cif=$_GET['cif'];
 	
-	$result = consultarAlojamientosReservas($_SESSION['Usuario']);
+	$result = consultarReservasAlojamiento($cif);
     if (!$result) {
       die('Could not select: ' . mysql_error());
     }
     
-    include "vista/vistaConsultarAlojamientosReservas.php";    
+    include "vista/vistaConsultarReservasBasico.php";    
 	
     mysql_close($con);
 

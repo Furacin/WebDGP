@@ -45,12 +45,16 @@ function consultarValoraciones($usuario){
     return (mysql_query("SELECT * FROM dgp.valoraciones WHERE usuario='".$usuario."'"));
 }
 
-function consultarAlojamientosReservas(){
-    return (mysql_query("SELECT * FROM dgp.alojamientos"));
+function consultarAlojamientosReservas($usuario){
+    return (mysql_query("SELECT * FROM dgp.alojamientos  WHERE usuario_alojamiento='".$usuario."'"));
 }
 
 function consultarReservas($usuario){
     return (mysql_query("SELECT * FROM dgp.reservas WHERE usuario='".$usuario."'"));
+}
+
+function consultarReservasAlojamiento($cif){
+    return (mysql_query("SELECT * FROM dgp.reservas WHERE alojamiento_reserva='".$cif."'"));
 }
 
 function consultarReservasRepresentante($usuario){
