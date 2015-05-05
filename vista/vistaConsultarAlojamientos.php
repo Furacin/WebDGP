@@ -49,7 +49,7 @@
             ". $fila['usuario_alojamiento']."
           </td>
           <td>
-            <a class=\"ico edit\" href='representante.php?opcion=editarAlojamiento&cif=".$fila['CIF']."' title='".$fila['nombre']."'>Editar</a> | <a class=\"del ico\" href='representante.php?opcion=eliminarAlojamiento&usuario' title='".$fila['CIF']."'>Eliminar</a>
+            <a class=\"ico edit\" href='representante.php?opcion=editarAlojamiento&cif=".$fila['CIF']."' title='".$fila['nombre']."'>Editar</a> | <a class=\"del ico\" href='representante.php?opcion=eliminarAlojamiento&cif=".$fila['CIF']."' title='".$fila['CIF']."'>Eliminar</a>
           </td>
         </tr>";
         }

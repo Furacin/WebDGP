@@ -54,7 +54,7 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                     include "vista/vistaUsuarioRepresentante.php";
                 break;
                 case "consultarUsuario":
-                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaCabeceraRepresentante.php"; 
                     include "controlador/consultarUsuarioRepresentante.php"; 
                 break;
                 case "editarUsuario":
@@ -78,6 +78,10 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                 case "altaAlojamiento":
                     include "vista/vistaCabeceraRepresentante.php";
                     include "vista/vistaRegistrarAlojamiento.php";
+                break;
+                case "eliminarAlojamiento":
+                    include "vista/vistaCabeceraRepresentante.php";
+                    include "vista/vistaEliminarAlojamiento.php";
                 break;
                 case "consultarAlojamientos":
                     include "vista/vistaCabeceraRepresentante.php";

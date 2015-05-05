@@ -93,6 +93,10 @@ function eliminarValoracion($id){
   return (mysql_query("DELETE FROM valoraciones WHERE id='".$id."'"));
 }
 
+function eliminarAlojamiento($cif){
+  return (mysql_query("DELETE FROM alojamientos WHERE cif='".$cif."'"));
+}
+
 function registrarAlojamiento($cif,$nombre,$ciudad,$direccion,$descripcion,$oferta,$usuario){
        return (mysql_query("INSERT INTO `dgp`.`alojamientos` (`CIF`, `nombre`, `ciudad`, `direccion`, `descripcion`, `oferta`,`usuario_alojamiento`) VALUES ('".$cif."','".$nombre."','".$ciudad."','".$direccion."','".$descripcion."','".$oferta."','".$usuario."')"));
 }

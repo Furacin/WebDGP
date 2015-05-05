@@ -297,7 +297,7 @@ header a.loginAdmin {
     font-family: "lato-bold", Helvetica, Arial, sans-serif;
     font-size: 70px;
     font-weight: lighter;
-    margin: 0;
+    margin-top: -120px;
     position: relative;
     display: block;
 }
@@ -307,6 +307,7 @@ header a.loginAdmin {
     font-family: "lato-regular", Helvetica, Arial, sans-serif;
     font-size: 11px;
     margin: -6px -500px 0 25px;
+    margin-top: -60px;
     left: 1px;
 }
 
@@ -635,7 +636,8 @@ table.buscador {
     color: #ffffff;
     font-size: 20px;
     background: #ff8c00;
-    padding: 5px 35px 5px 25px;
+    padding: 5px 25px 5px 25px;
+    margin-right: 25px;
     text-decoration: none;
 }
 
