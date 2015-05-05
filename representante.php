@@ -55,18 +55,14 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                 break;
                 case "consultarUsuario":
                     include "vista/vistaCabeceraRepresentante.php";
-                    //include "vista/vistaConsultarUsuarioRepresentante.php"; 
                     include "controlador/consultarUsuarioRepresentante.php"; 
                 break;
                 case "editarUsuario":
-                    include "vista/vistaCabeceraRepresentante.php";
-                    //include "vista/vistaGestionUsuarios.php"; 
+                    include "vista/vistaCabeceraRepresentante.php"; 
                     include "controlador/editarUsuario.php"; 
                 break;
                 case "notificacionAdmin":
-                    include "vista/vistaCabeceraRepresentante.php";
-                    //include "vista/vistaConsultarUsuarioRepresentante.php"; 
-                    //include "controlador/consultarUsuarioRepresentante.php"; 
+                    include "vista/vistaCabeceraRepresentante.php"; 
                 break;              
                 case "Reservas":
                     include "vista/vistaCabeceraRepresentante.php";
@@ -90,12 +86,10 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                 case "consultarAlojamientosDisponibilidades":
                     include "vista/vistaCabeceraRepresentante.php";
                     include "controlador/consultarAlojamientosReservasDisponibilidades.php";
-                    //include "controlador/consultarAlojamientosDisponibilidadesRepresentante.php"; 
                 break;
                 case "editarAlojamiento":
                     include "vista/vistaCabeceraRepresentante.php";
                     include "vista/vistaModificacionAlojamientos.php"; 
-                    //include "controlador/modificarAlojamiento.php"; 
                 break;
                 case "consultarReservas":
                     include "vista/vistaCabeceraRepresentante.php";
@@ -111,7 +105,6 @@ if((!isset($_SESSION['Usuario'])) or ($_SESSION['Tipo']!="representante")){
                 break;
                 default:                   
                     include "vista/vistaCabeceraRepresentante.php";
-                    //include "vista/vistaUsuarioRepresentante.php";
                 break;
             }
             echo "</section><!--  end hero section  -->";
